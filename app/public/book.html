@@ -38,7 +38,7 @@
       <br>
       <h3>Here's a List of My Favorite Novels!</h3>
     </div>
-    <table class="table">
+    <table id = favorites class="table">
         <thead>
         <tr>
         <th scope="col">Title</th>
@@ -112,6 +112,10 @@
             <label for="page-count" class="form-label">Page Count</label>
             <input type="text" class="form-control" id="page-count" aria-describedby="page-countHelp">
         </div>
+        <div class="mb-3">
+          <label for="msrp" class="form-label">MSRP</label>
+          <input type="text" class="form-control" id="msrp" aria-describedby="msrpHelp">
+        </div>
         <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     <br>
@@ -121,6 +125,11 @@
     <a href="img/img_6.jpg">
     <img src = "img/img_6.jpg" height="750px"/>
     </a>
+    <script src="js/tablesort.js">
+    </script>
+    <script>
+      new Tablesort(document.getElementById('favorites'));
+    </script>
 </body>
 <footer>
     <br>
