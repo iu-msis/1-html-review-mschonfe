@@ -52,12 +52,10 @@
       <h5>Name: {{result.name.first }} </h5>
       <h5>Name: {{result.name.last }} </h5>
       <h5>Birth Date: {{ result.dob.date }}</h5>
-      <h5>Age: </h5>
-      <h5></h5>
-      <br>
+      <h5>Age: {{ result.dob.age }}</h5>
       <h5>Country of Origin: USA</h5>
       <br>
-      <p><a v-bind:href="'mailto:' + result.email">{{ result.email }}</a></p>
+      <p>Email Me! </p><p><a v-bind:href="'mailto:' + result.email">{{ result.email }}</a></p>
       <br>
       <a href="img/img_4.jpg">
       <img src = "img/img_4.jpg" width="500px" />
