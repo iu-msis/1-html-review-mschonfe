@@ -35,9 +35,8 @@
       </div>
     </div>
   </nav>
-  <div>
+  <div class="container">
       <h1>Want To Know More About Me?</h1>
-      <br>
       <br>
       <div class="col col-8" id="someApp">
       <h5>Firstname: {{result.name.first }} </h5>
@@ -47,7 +46,9 @@
       <h5>Country of Origin: USA</h5>
       <br>
       <p>Email Me!</p><a v-bind:href="'mailto:' + result.email">{{result.email}}</a></p>
-      <p><a v-bind:href="'result.picture.large"><img v-bind:src="result.picutre.large"/></a></p>
+      <p><a v-bind:href="result.picture.large"><img v-bind:src="result.picture.large"/></a></p>
+      <br>
+  </div>
   </div>
   <script src="js/index.js"></script>
 </body>
