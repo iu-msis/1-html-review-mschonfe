@@ -44,18 +44,16 @@
   <div>
       <h1>Want To Know More About Me?</h1>
       <br>
-      <a href="img/img_3.jpg">
-      <img src = "img/img_3.jpg" width="500px"/>
-      </a>
       <br>
       <div class="col col-8" id="someApp">
-      <h5>Name: {{result.name.first }} </h5>
-      <h5>Name: {{result.name.last }} </h5>
+      <h5>Firstname: {{result.name.first }} </h5>
+      <h5>Lastname: {{result.name.last }} </h5>
       <h5>Birth Date: {{ result.dob.date }}</h5>
       <h5>Age: {{ result.dob.age }}</h5>
       <h5>Country of Origin: USA</h5>
       <br>
-      <p>Email Me! </p><p><a v-bind:href="'mailto:' + result.email">{{ result.email }}</a></p>
+      <p>Email Me!</p><a v-bind:href="'mailto:' + result.email"><img v-blind:href="result.picutre.large"/></a></p>
+      <p><a v-bind:href="'result.picture.large">{{ result.picture.large }}</a></p>
       <br>
       <a href="img/img_4.jpg">
       <img src = "img/img_4.jpg" width="500px" />
