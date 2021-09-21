@@ -49,11 +49,6 @@
         <ul>
           <li v-for="item in list">{{ item }}</li>
         </ul>
-        <p>{{ message }}</p>
-        <p>{{ result.name }}</p>
-        <p>{{ result.dob.date }}</p>
-        <p>{{ prettyBirthday }}</p>
-        <p><a v-bind:href="'mailto:' + result.email">{{ result.email }}</a></p>
       </div>
     </div>
   <div>
@@ -67,8 +62,7 @@
       <h5>Name: {{result.name.last }} </h5>
       <h5>Birth Date: {{ result.dob.date }}</h5>
       <h5>Age: {{ prettyBirthday }}</h5>
-      <h5></h5>
-      <br>
+      <p><a v-bind:href="'mailto:' + result.email">{{ result.email }}</a></p>
       <h5>Country of Origin: USA</h5>
       <br>
       <h5><a href = "mailto: mjpopgod@yahoo.com">Email me to reach me!</a> </h5>
