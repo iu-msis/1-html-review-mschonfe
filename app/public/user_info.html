@@ -46,9 +46,7 @@
         <form v-on:submit.prevent="fetchUserData">
           <button type="submit">Refresh</button>
         </form>
-        <ul>
-          <li v-for="item in list">{{ item }}</li>
-        </ul>
+        <p><a v-bind:href="'mailto:' + result.email">{{ result.email }}</a></p>
       </div>
     </div>
   <div>
@@ -58,14 +56,17 @@
       <img src = "img/img_3.jpg" width="500px"/>
       </a>
       <br>
+      <div class="col col-8" id="someApp">
       <h5>Name: {{result.name.first }} </h5>
       <h5>Name: {{result.name.last }} </h5>
       <h5>Birth Date: {{ result.dob.date }}</h5>
-      <h5>Age: {{ prettyBirthday }}</h5>
-      <p><a v-bind:href="'mailto:' + result.email">{{ result.email }}</a></p>
+      <h5>Age: </h5>
+      <h5></h5>
+      <br>
       <h5>Country of Origin: USA</h5>
       <br>
-      <h5><a href = "mailto: mjpopgod@yahoo.com">Email me to reach me!</a> </h5>
+      <p><a v-bind:href="'mailto:' + result.email">{{ result.email }}</a></p>
+      <br>
       <a href="img/img_4.jpg">
       <img src = "img/img_4.jpg" width="500px" />
       </a>
