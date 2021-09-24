@@ -45,6 +45,9 @@
       <h5>Age: {{ result.dob.age }}</h5>
       <h5>Country of Origin: USA</h5>
       <br>
+      <form v-on:submit.prevent="fetchUserData">
+        <button type="submit">Refresh</button>
+      </form>
       <p>Email Me!</p><a v-bind:href="'mailto:' + result.email">{{result.email}}</a></p>
       <p><a v-bind:href="result.picture.large"><img v-bind:src="result.picture.large"/></a></p>
       <br>
