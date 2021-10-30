@@ -31,11 +31,11 @@ $db = DbConnection::getConnection();
 // Step 2: Create & run the query
 // Note the use of parameterized statements to avoid injection
 $stmt = $db->prepare(
-  'DELETE FROM books WHERE id = ?'
+  'DELETE FROM books WHERE bookid = ?'
 );
 
 $stmt->execute([
-  $_POST['id']
+  $_POST['bookid']
 ]);
 
 // Get auto-generated PK from DB

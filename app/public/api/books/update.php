@@ -31,14 +31,14 @@ $db = DbConnection::getConnection();
 // Step 2: Create & run the query
 // Note the use of parameterized statements to avoid injection
 $stmt = $db->prepare(
-  'UPDATE books SET
+  'UPDATE books SET 
     title = ?,
     author = ?,
     year_published = ?,
-    published = ?,
+    publisher = ?,
     page_count = ?,
     msrp = ?
-  WHERE id = ?',
+  WHERE bookid = ?'
 );
 
 $stmt->execute([
@@ -47,7 +47,8 @@ $stmt->execute([
   $_POST['year_published'],
   $_POST['publisher'],
   $_POST['page_count'],
-  $_POST['msrp']
+  $_POST['msrp'],
+  $_POST['bookid']
 ]);
 
 // Get auto-generated PK from DB
@@ -58,4 +59,4 @@ $stmt->execute([
 // Here, instead of giving output, I'm redirecting to the SELECT API,
 // just in case the data changed by entering it
 header('HTTP/1.1 303 See Other');
-header('Location: ../books/?book=' . $_POST['id']);
+header('Location: ../books/index.php');
