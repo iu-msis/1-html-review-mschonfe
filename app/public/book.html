@@ -58,9 +58,17 @@
                 <td>{{ b.publisher }}</td>
                 <td>{{ b.page_count }}</td>
                 <td>{{ b.msrp }}</td>
+                <td>
+                  <button type="button" class="btn btn-outline-secondary btn-sm"
+                    v-on:click="selectBook(Book)">Edit</button>
+                  <button type="button" class="btn btn-outline-secondary btn-sm"
+                    v-on:click="postDeleteBook(Book)">Delete</button>
+                </td>
             </tr>
         </tbody>
     </table>
+    <h3>{{ selectedBook === null ? "Add" : "Edit" }} Offer</h3>
+    <form v-on:submit.prevent="postBook">
         <form v-on:submit.prevent="postNewBook">
         <div class="mb-3 form-group">
             <label for="title" class="form-label">Title</label>
@@ -87,6 +95,10 @@
           <input type="text" class="form-control" id="msrp" v-model="bookForm.msrp" placeholder="Enter description">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">{{ selectedBook === null ? "Add" : "Edit" }} Book</button>
+        <button type="button" class="btn btn-outline-secondary" 
+          v-if="selectedBook"
+          v-on:click="resetBookForm">Cancel</button>
         </form>
       </div>
     <br>
